@@ -1,11 +1,16 @@
 ; Keep Task Helper 1.0
-; A script to assist in obtaining Keep Tasks on the Dark Age of Camelot Brotherlands Server
 ; Written by Tamlan Tenderheart
 ;
+; A script to assist in obtaining Keep Tasks on the Dark Age of Camelot Brotherlands Server
+; To use this script, you must have AHK (https://www.autohotkey.com/) installed.
+;
 ; Usage:
-; Press F1 to bring up the configuration UI. Here you select which tower or keep you want
-; to obtain a task for. Select a Keep Captain and press F2. If successful, the keep Captain
-; will confirm the task with a dialog message in-game.
+; 1. Press F1 to bring up the configuration UI.
+; 2. Select which tower or keep you want to obtain a task for. 
+; 3. Switch back to the game and target a Central Keep Captain (Tower captains will not work)
+; 4. Press F2. 
+;
+; If successful, the Keep Captain will confirm that you have engaged the task with a dialog message in-game.
 
 #SingleInstance, force
 #MaxThreadsPerHotkey 2
@@ -133,26 +138,26 @@ TV_Add("Nottmoor Faste Watchtower", Nottmoor)
 
 ; Bindings
 
+; Uncomment the following line if the script should only launch when the DAOC game window has focus
+; #IfWinActive ahk_exe game.dll
+
 F1::
-Gui, Show, xCenter yCenter h374 w347, Keep Task Helper -- by Tamlan Tenderheart
+Gui, Show, h374 w347, Keep Task Helper -- by Tamlan Tenderheart
 Return
 
 F2::
 SelectedID := TV_GetSelection()
-If( SelectedTarget != 0 AND SelectedID != Albion AND SelectedID != Hibernia AND SelectedID != Midgard)
+If( SelectedID != 0 AND SelectedID != Albion AND SelectedID != Hibernia AND SelectedID != Midgard)
 {
     TV_GetText(Target, SelectedID)
     Parent := TV_GetParent(SelectedID)
     If(Parent = Albion OR Parent = Hibernia OR Parent = Midgard)
     {
-        Send, "/whisper Keep Capture %Target%{Enter}
+        Send, /whisper Keep Capture %Target%{Enter}
     }
     Else
     {
-        Send, "/whisper Tower Capture %Target%{Enter}
+        Send, /whisper Tower Capture %Target%{Enter}
     }
 }
 Return
-
-GuiClose:
-ExitApp
