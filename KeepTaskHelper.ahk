@@ -15,131 +15,38 @@
 #SingleInstance, force
 #MaxThreadsPerHotkey 2
 
+; Variables
+AlbionKeeps := ["Caer Benowyc","Caer Berkstead","Caer Boldiam","Caer Hurbury","Caer Erasleigh","Caer Renaris","Caer Sursbrooke"]
+HiberniaKeeps := ["Dun Ailinne","Dun Da Behn","Dun Bolg","Dun Crauchon","Dun Crimthain","Dun Nged","Dun Scathaig"]
+MidgardKeeps := ["Arvakr Faste","Bledmeer Faste","Blendrake Faste","Fensalir Faste","Glenlock Faste","Hlidskialf Faste"]
+;Towers := ["Guardtower","Outpost","Spire","Watchtower"]
+
 ; GUI
 Gui, Add, TreeView, x12 y9 w320 h310
 Gui, Add, Text, x12 y329 320 h30 , Press F2 to send the selected target to the active Window
 
-Albion := TV_Add("Albion",,+Bold)
-Benowyc := TV_Add("Caer Benowyc", Albion)
-TV_Add("Caer Benowyc Guardtower", Benowyc)
-TV_Add("Caer Benowyc Outpost", Benowyc)
-TV_Add("Caer Benowyc Spire", Benowyc)
-TV_Add("Caer Benowyc Watchtower", Benowyc)
+Albion   := AddKeeps("Albion",AlbionKeeps)
+Hibernia := AddKeeps("Hibernia",HiberniaKeeps)
+Midgard  := AddKeeps("Midgard",MidgardKeeps)
 
-Berkstead := TV_Add("Caer Berkstead", Albion)
-TV_Add("Caer Berkstead Guardtower", Berkstead)
-TV_Add("Caer Berkstead Outpost", Berkstead)
-TV_Add("Caer Berkstead Spire", Berkstead)
-TV_Add("Caer Berkstead Watchtower", Berkstead)
-
-Hurbury := TV_Add("Caer Hurbury", Albion)
-TV_Add("Caer Hurbury Guardtower", Hurbury)
-TV_Add("Caer Hurbury Outpost", Hurbury)
-TV_Add("Caer Hurbury Spire", Hurbury)
-TV_Add("Caer Hurbury Watchtower", Hurbury)
-
-Erasleigh := TV_Add("Caer Erasleigh", Albion)
-TV_Add("Caer Erasleigh Guardtower", Erasleigh)
-TV_Add("Caer Erasleigh Outpost", Erasleigh)
-TV_Add("Caer Erasleigh Spire", Erasleigh)
-TV_Add("Caer Erasleigh Watchtower", Erasleigh)
-
-Renaris := TV_Add("Caer Renaris", Albion)
-TV_Add("Caer Renaris Guardtower", Renaris)
-TV_Add("Caer Renaris Outpost", Renaris)
-TV_Add("Caer Renaris Spire", Renaris)
-TV_Add("Caer Renaris Watchtower", Renaris)
-
-Sursbrook := TV_Add("Caer Sursbrooke", Albion)
-TV_Add("Caer Sursbrook Guardtower", Sursbrook)
-TV_Add("Caer Sursbrook Outpost", Sursbrook)
-TV_Add("Caer Sursbrook Spire", Sursbrook)
-TV_Add("Caer Sursbrook Watchtower", Sursbrook)
-
-Hibernia := TV_Add("Hibernia",,+Bold)
-Ailinne := TV_Add("Dun Ailinne", Hibernia)
-TV_Add("Dun Ailinne Guardtower", Ailinne)
-TV_Add("Dun Ailinne Outpost", Ailinne)
-TV_Add("Dun Ailinne Spire", Ailinne)
-TV_Add("Dun Ailinne Watchtower", Ailinne)
-
-Behn := TV_Add("Dun Da Behn", Hibernia)
-TV_Add("Dun Da Behn Guardtower", Behn)
-TV_Add("Dun Da Behn Outpost", Behn)
-TV_Add("Dun Da Behn Spire", Behn)
-TV_Add("Dun Da Behn Watchtower", Behn)
-
-Bolg := TV_Add("Dun Bolg", Hibernia)
-TV_Add("Bolg Bolg Guardtower", Bolg)
-TV_Add("Bolg Bolg Outpost", Bolg)
-TV_Add("Bolg Bolg Spire", Bolg)
-TV_Add("Bolg Bolg Watchtower", Bolg)
-
-Crauchon := TV_Add("Dun Crauchon", Hibernia)
-TV_Add("Dun Crauchon Guardtower", Crauchon)
-TV_Add("Dun Crauchon Outpost", Crauchon)
-TV_Add("Dun Crauchon Spire", Crauchon)
-TV_Add("Dun Crauchon Watchtower", Crauchon)
-
-Crimthain := TV_Add("Dun Crimthain", Hibernia)
-TV_Add("Dun Crimthain Guardtower", Crimthain)
-TV_Add("Dun Crimthain Outpost", Crimthain)
-TV_Add("Dun Crimthain Spire", Crimthain)
-TV_Add("Dun Crimthain Watchtower", Crimthain)
-
-Nged := TV_Add("Dun Nged", Hibernia)
-TV_Add("Dun Nged Guardtower", Nged)
-TV_Add("Dun Nged Outpost", Nged)
-TV_Add("Dun Nged Spire", Nged)
-TV_Add("Dun Nged Watchtower", Nged)
-
-Scathaig := TV_Add("Dun Scathaig", Hibernia)
-TV_Add("Dun Scathaig Guardtower", Scathaig)
-TV_Add("Dun Scathaig Outpost", Scathaig)
-TV_Add("Dun Scathaig Spire", Scathaig)
-TV_Add("Dun Scathaig Watchtower", Scathaig)
-
-Midgard := TV_Add("Midgard",,+Bold)
-Arvakr := TV_Add("Arvakr Faste", Midgard)
-TV_Add("Arvakr Faste Guardtower", Arvakr)
-TV_Add("Arvakr Faste Outpost", Arvakr)
-TV_Add("Arvakr Faste Spire", Arvakr)
-TV_Add("Arvakr Faste Watchtower", Arvakr)
-
-Bledmeer := TV_Add("Bledmeer Faste", Midgard)
-TV_Add("Bledmeer Faste Guardtower", Bledmeer)
-TV_Add("Bledmeer Faste Outpost", Bledmeer)
-TV_Add("Bledmeer Faste Spire", Bledmeer)
-TV_Add("Bledmeer Faste Watchtower", Bledmeer)
-
-Blendrake := TV_Add("Blendrake Faste", Midgard)
-TV_Add("Blendrake Faste Guardtower", Blendrake)
-TV_Add("Blendrake Faste Outpost", Blendrake)
-TV_Add("Blendrake Faste Spire", Blendrake)
-TV_Add("Blendrake Faste Watchtower", Blendrake)
-
-Fensalir := TV_Add("Fensalir Faste", Midgard)
-TV_Add("Fensalir Faste Guardtower", Fensalir)
-TV_Add("Fensalir Faste Outpost", Fensalir)
-TV_Add("Fensalir Faste Spire", Fensalir)
-TV_Add("Fensalir Faste Watchtower", Fensalir)
-
-Glenlock := TV_Add("Glenlock Faste", Midgard)
-TV_Add("Glenlock Faste Guardtower", Glenlock)
-TV_Add("Glenlock Faste Outpost", Glenlock)
-TV_Add("Glenlock Faste Spire", Glenlock)
-TV_Add("Glenlock Faste Watchtower", Glenlock)
-
-Nottmoor := TV_Add("Nottmoor Faste", Midgard)
-TV_Add("Nottmoor Faste Guardtower", Nottmoor)
-TV_Add("Nottmoor Faste Outpost", Nottmoor)
-TV_Add("Nottmoor Faste Spire", Nottmoor)
-TV_Add("Nottmoor Faste Watchtower", Nottmoor)
-
-; Bindings
+AddKeeps(RealmName,Keeps)
+{
+    Realm := TV_Add(RealmName)
+    For index,KeepName in Keeps
+    {
+        Keep := TV_Add(KeepName,Realm)
+        TV_Add(KeepName . " Guardtower", Keep)
+        TV_Add(KeepName . " Outpost", Keep)
+        TV_Add(KeepName . " Spire", Keep)
+        TV_Add(KeepName . " Watchtower", Keep)
+    }
+    return Realm
+}
 
 ; Uncomment the following line if the script should only launch when the DAOC game window has focus
 ; #IfWinActive ahk_exe game.dll
+
+; Bindings
 
 F1::
 Gui, Show, h374 w347, Keep Task Helper -- by Tamlan Tenderheart
