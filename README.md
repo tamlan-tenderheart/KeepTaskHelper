@@ -1,5 +1,6 @@
 # KeepTaskHelper
 A script to help obtain keep tasks on the Brotherlands 2, Dark Age of Camelot Server
+To use this script, you must have AHK (https://www.autohotkey.com/) installed.
 ## Usage:
 1. Press F1 to bring up the configuration UI.
 2. Select which tower or keep you want to obtain a task for. 
