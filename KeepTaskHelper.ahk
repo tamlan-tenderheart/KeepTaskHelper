@@ -18,7 +18,7 @@
 ; Variables
 AlbionKeeps := ["Caer Benowyc","Caer Berkstead","Caer Boldiam","Caer Hurbury","Caer Erasleigh","Caer Renaris","Caer Sursbrooke"]
 HiberniaKeeps := ["Dun Ailinne","Dun Da Behn","Dun Bolg","Dun Crauchon","Dun Crimthain","Dun Nged","Dun Scathaig"]
-MidgardKeeps := ["Arvakr Faste","Bledmeer Faste","Blendrake Faste","Fensalir Faste","Glenlock Faste","Hlidskialf Faste"]
+MidgardKeeps := ["Arvakr Faste","Bledmeer Faste","Blendrake Faste","Fensalir Faste","Glenlock Faste","Hlidskialf Faste","Nottmoor Faste"]
 ;Towers := ["Guardtower","Outpost","Spire","Watchtower"]
 
 ; GUI
