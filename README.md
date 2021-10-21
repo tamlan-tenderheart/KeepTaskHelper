@@ -9,4 +9,4 @@ To use this script, you must have AHK (https://www.autohotkey.com/) installed.
 
 If successful, the Keep Captain will confirm that you have engaged the task with a dialog message in-game.
 
-![Keep Task UI](/KeepTaskHelperUI.png)
+![Keep Task UI](KeepTaskHelperUI.PNG)
